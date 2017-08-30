@@ -8,7 +8,7 @@ import Mondrian from "./Component/Mondrian";
 class App extends Component {
   render() {
     return (
-      <BrowserRouter>
+      <BrowserRouter basename="/spa">
         {/* here's a div */}
         <div>
           {/* here's a Route */}
