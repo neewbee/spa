@@ -1,19 +1,29 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import { BrowserRouter, Route } from "react-router-dom";
+
+import Mondrian from "./Component/Mondrian";
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+      <BrowserRouter>
+        {/* here's a div */}
+        <div>
+          {/* here's a Route */}
+          <Route path="/mondrian" component={Mondrian} />
+          <div id="container">
+            <div id="border" />
+            <div id="blocker-1" />
+            <div id="blocker-2" />
+            <h2>neewbee</h2>
+            <h1>welcome</h1>
+            <h2>bar</h2>
+          </div>
         </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+
+      </BrowserRouter>
     );
   }
 }
